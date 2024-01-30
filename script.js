@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
         section.style.transform = 'translateY(0)';
     });
 });
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Set your start date here
-    const startDate = new Date('2024-01-20');
+    // Set your start date here (in the format: "YYYY-MM-DD")
+    const startDateString = '2024-01-20';
+    const startDate = new Date(startDateString);
 
     // Function to calculate the difference in days
     function calculateDays() {
