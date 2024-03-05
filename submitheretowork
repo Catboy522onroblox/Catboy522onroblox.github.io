@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit here</title>
+</head>
+<body>
+
+    <h1>Contact Form</h1>
+    <p>PLEASE FILL OUT THIS FORM IF YOU WOULD LIKE TO WORK WITH ME (FOR LOGGING PURPOSES)</p>
+
+    <form id="discordForm">
+        <label for="username">Your Discord Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required></textarea><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Fetch form data
+            const username = document.getElementById('username').value;
+            const message = document.getElementById('message').value;
+
+            // Create JSON payload
+            const payload = {
+                username: username,
+                content: message
+            };
+
+            // Send data to Discord webhook (replace 'YOUR_WEBHOOK_URL' with your actual Discord webhook URL)
+            fetch('https://discord.com/api/webhooks/1214690251709353984/P_s0fPjmX0ZKh38zkgE6kBmX_pv9dXDpcc7KvlRUn21yXYmXk821FxTvzGxAAp5sgNFH', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data sent to Discord:', data);
+                alert('Form submitted successfully!');
+                document.getElementById('discordForm').reset();
+            })
+            .catch((error) => {
+                console.error('Error sending data to Discord:', error);
+                alert('Error submitting form. Please try again later.');
+            });
+        }
+    </script>
+
+</body>
+</html>
