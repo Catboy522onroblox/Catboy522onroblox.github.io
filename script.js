@@ -34,3 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update the days counter every 24 hours
     setInterval(updateDaysCounter, 24 * 60 * 60 * 1000);
 });
+
+// script.js
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // You can add code here to handle form submission, like sending data to a server or displaying a confirmation message.
+    alert('Form submitted successfully!');
+});
+
