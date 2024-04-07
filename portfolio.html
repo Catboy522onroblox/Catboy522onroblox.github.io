@@ -3,79 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-        </nav>
+        <h1>My Portfolio</h1>
     </header>
-
-    <section id="portfolio">
-        <div class="content">
-            <h1>My experience</h1>
-
-            <div class="project">
-                <h3>Brightline ROBLOX</h3>
-                <p>Chief Executive Officer</p>
-                <a href="https://www.roblox.com/groups/16670689/Starliner-Airways#!/about" target="_blank">View Group</a>
-            </div>
-
-            <div class="project">
-                <h3>Bloxstreet</h3>
-                <p>Executive Assistant</p>
-                <a href="https://www.roblox.com/groups/2700627/BloxStreet-Corporation" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Bloxton Hotels</h3>
-                <p>Housekeeping</p>
-                <a href="https://www.roblox.com/groups/2788849/Bloxton-Hotels" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Booboo Cafe</h3>
-                <p>President, Co-lead of Development, Overseer of Staffing, Recruitment, Public Relations</p>
-                <a href="https://www.roblox.com/groups/11922756/Booboo-Entertainment" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Bistro</h3>
-                <p>Corporate Director</p>
-                <a href="https://www.roblox.com/groups/4773348/Bristo#!/about" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Corsa Cafe</h3>
-                <p>President, Head of Public Relations</p>
-                <a href="https://www.roblox.com/groups/3152347/Corsa-Cafe" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Crusto</h3>
-                <p>General Manager</p>
-                <a href="ttps://www.roblox.com/groups/4140258/Crusto" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Delta Airlines (DAL)</h3>
-                <p>Senior Employee of Ground Operations</p>
-                <a href="https://www.roblox.com/groups/5206342/Delta-Air-Lines-DAL" target="_blank">View Group</a>
-            </div>
-
-             <div class="project">
-                <h3>Frappe</h3>
-                <p>Executive Assistant</p>
-                <a href="https://www.roblox.com/groups/2700627/BloxStreet-Corporation" target="_blank">View Group</a>
-            </div>
-
-
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I'm a passionate developer...</p>
         </div>
     </section>
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+                <a href="#">View Project</a>
+            </div>
+            <!-- More projects can be added here -->
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
